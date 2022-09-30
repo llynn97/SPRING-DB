@@ -68,7 +68,7 @@ public class JpaItemRepositoryV3 implements ItemRepository {
                 .fetch();
         return result;
     }
-    
+
     @Override
     public List<Item> findAll(ItemSearchCond cond) {
         String itemName = cond.getItemName();
