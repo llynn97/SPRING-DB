@@ -118,7 +118,7 @@ class MemberServiceTest {
         org.assertj.core.api.Assertions.assertThatThrownBy(()->memberService.joinV2(username))
                 .isInstanceOf(RuntimeException.class);
 
-        //모든 데이터가 롤백
+
         Assertions.assertTrue(memberRepository.find(username).isEmpty());
         Assertions.assertTrue(logRepository.find(username).isEmpty());
     }
